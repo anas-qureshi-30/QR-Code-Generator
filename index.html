@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Tagesschrift&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>QR Code Generator</title>
+    <script>
+        function generateQr() {
+            const input = document.getElementById("textInput").value.trim();
+            if (input === "") {
+                alert("Please enter text or URL.");
+                return;
+            }
+            document.getElementById("qrDisplay").src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(input);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="text">
+        QR Code <span>Generator</span>
+    </div>
+    <div class="mainContainer">
+        <div class="container">
+            <input type="text" placeholder="Enter the text or URL" id="textInput">
+            <input type="button" value="Generate QR Code" id="submitBtn" onclick="generateQr()">
+        </div>
+        <div class="imgDiv">
+            <img src="" id="qrDisplay" alt="Your QR Code will appear here">
+        </div>
+    </div>
+</body>
+
+</html>

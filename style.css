@@ -1,0 +1,95 @@
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.text {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.text span {
+    color: #ff7f50;
+}
+
+.mainContainer {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container input[type="text"] {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.container input[type="button"] {
+    padding: 10px 15px;
+    background-color: #ff7f50;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.container input[type="button"]:hover {
+    background-color: #ff5722;
+}
+
+.imgDiv {
+    flex: 1 1 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.imgDiv img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    text-align: center;
+    border: 3px solid white;
+    background: white;
+}
+
+@media (max-width: 600px) {
+    .mainContainer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .imgDiv {
+        justify-content: center;
+    }
+}
